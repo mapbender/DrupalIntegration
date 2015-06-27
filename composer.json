@@ -1,0 +1,23 @@
+{
+    "name": "mapbender/drupalintegration",
+    "description": "Mapbender drupalintegration",
+    "keywords": ["mapbender", "drupal"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Wygoda"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mapbender\\DrupalIntegrationBundle": "src/"
+        }
+    }
+}
