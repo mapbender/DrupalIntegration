@@ -10,7 +10,7 @@
 
         <service id="drupal.security.authentication.listener"
             class="Mapbender\DrupalIntegrationBundle\Security\Firewall\DrupalListener" public="false">
-            <argument type="service" id="security.context"/>
+            <argument type="service" id="security.token_storage"/>
             <argument type="service" id="security.authentication.manager" />
         </service>
 

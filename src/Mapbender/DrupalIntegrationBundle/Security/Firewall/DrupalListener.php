@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\Security\Http\Firewall\ListenerInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
-use Symfony\Component\Security\Core\SecurityContextInterface;
+use Symfony\Component\Security\Core\TokenStorage;
 use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface;
 use Mapbender\DrupalIntegrationBundle\Security\Authentication\Token\DrupalUserToken;
 use Mapbender\DrupalIntegrationBundle\Security\User\DrupalUser;
@@ -17,7 +17,7 @@ class DrupalListener implements ListenerInterface
     protected $securityContext;
     protected $authenticationManager;
 
-    public function __construct(SecurityContextInterface $securityContext, AuthenticationManagerInterface $authenticationManager)
+    public function __construct(TokenStorage $securityContext, AuthenticationManagerInterface $authenticationManager)
     {
         $this->securityContext = $securityContext;
         $this->authenticationManager = $authenticationManager;
